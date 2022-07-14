@@ -1,4 +1,5 @@
 
+from operator import getitem
 from selenium import webdriver
 from selenium.webdriver.common.by import By
  #import time
@@ -27,3 +28,4 @@ element = wd.find_element(By.CLASS_NAME, 'ivu-tree-arrow').click()
 #element = wd.find_element(By.CSS_SELECTOR, 'custom-chapter-node selected').click()
 
 wd.quit()
+getitem
