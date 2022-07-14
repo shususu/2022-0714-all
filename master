@@ -1,1 +1,29 @@
-测试123
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+ #import time
+ #time.sleep(1)
+# 创建 WebDriver 对象，指明使用chrome浏览器驱动
+wd = webdriver.Chrome(r'C:\chromedriver.exe')
+wd.implicitly_wait(10)
+# 调用WebDriver 对象的get方法 可以让浏览器打开指定网址
+wd.get('http://tail.cloudbag.com')
+wd.find_element(By.ID, 'username').send_keys('erer')
+wd.find_element(By.ID, 'password').send_keys('Zb@11231')
+wd.find_element(By.CSS_SELECTOR, 'button[type=button]').click()
+#element = wd.find_element(By.TAG_NAME, 'a')
+# wd.find_element(By.CLASS_NAME, 'button[name=备课/n]').click()
+element = wd.find_element(By.CLASS_NAME, 'menu-item').click()
+  #elements = wd.find_elements(By.TAG_NAME, 'div')
+
+#for element in elements:
+#print(element.text)
+
+#wd.quit()
+wd.find_element(By.CSS_SELECTOR, '[href="#/clazz-teaching"]').click()
+#print(element.get_attribute('outerHTML'))
+#element = wd.find_element(By.CLASS_NAME, 'custom-chapter-node selected').click()
+element = wd.find_element(By.CLASS_NAME, 'ivu-tree-arrow').click()
+#element = wd.find_element(By.CSS_SELECTOR, 'custom-chapter-node selected').click()
+
+wd.quit()
